@@ -1,0 +1,172 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .game-container {
+    background: #e0e0e0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+    text-align: center;
+    max-width: 90%;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2.5em;
+  }
+  
+  .difficulty {
+    margin-bottom: 20px;
+  }
+  
+  .difficulty button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    background: #d0d0d0;
+    box-shadow: 3px 3px 5px #bebebe, -3px -3px 5px #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1em;
+  }
+  
+  .difficulty button:hover {
+    box-shadow: inset 3px 3px 5px #bebebe, inset -3px -3px 5px #ffffff;
+  }
+  
+  .custom-difficulty {
+    margin-top: 10px;
+  }
+  
+  .custom-difficulty input {
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #d0d0d0;
+    box-shadow: inset 3px 3px 5px #bebebe, inset -3px -3px 5px #ffffff;
+    font-size: 1em;
+  }
+  
+  .custom-difficulty button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background: #d0d0d0;
+    box-shadow: 3px 3px 5px #bebebe, -3px -3px 5px #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1em;
+  }
+  
+  .custom-difficulty button:hover {
+    box-shadow: inset 3px 3px 5px #bebebe, inset -3px -3px 5px #ffffff;
+  }
+  
+  .info {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .board {
+    display: grid;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .cell {
+    width: 30px;
+    height: 30px;
+    background: #d0d0d0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #bebebe, -3px -3px 5px #ffffff;
+    transition: all 0.2s ease;
+  }
+  
+  .cell.revealed {
+    background: #c0c0c0;
+    box-shadow: inset 3px 3px 5px #bebebe, inset -3px -3px 5px #ffffff;
+  }
+  
+  .cell.flagged {
+    background: #ffcccb;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #d0d0d0;
+    box-shadow: 3px 3px 5px #bebebe, -3px -3px 5px #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1em;
+  }
+  
+  button:hover {
+    box-shadow: inset 3px 3px 5px #bebebe, inset -3px -3px 5px #ffffff;
+  }
+  
+  #status {
+    font-size: 1.2em;
+    color: #333;
+  }
+  /* 弹窗样式 */
+  .popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background: #e0e0e0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+    text-align: center;
+    position: relative;
+  }
+  
+  .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .close-popup:hover {
+    color: #000;
+  }
+  

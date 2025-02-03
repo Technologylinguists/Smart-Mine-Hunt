@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智域扫雷</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <!-- 弹窗 -->
+    <div id="welcome-popup" class="popup">
+      <div class="popup-content">
+        <span id="close-popup" class="close-popup">&times;</span>
+        <h2>欢迎来到智域扫雷！</h2>
+        <p>请选择难度开始游戏。</p>
+        <p>
+          项目作者:<a
+            class="hover:cursor-pointer hover:underline"
+            target="__blank"
+            href="https://www.uopy.top/"
+            >科技语者</a
+          >
+        </p>
+        <p>
+          开源协议:<a
+            class="hover:cursor-pointer hover:underline"
+            target="__blank"
+            href="https://cnb.cool/kejiyuzhe/Smart-Mine-Hunt?tabValue=Apache-2.0-ov-file"
+            >Apache-2.0 license</a
+          >
+        </p>
+        <p>
+          开源地址:<a
+            class="hover:cursor-pointer hover:underline"
+            target="__blank"
+            href="https://cnb.cool/kejiyuzhe/Smart-Mine-Hunt"
+            >CNB</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="game-container">
+      <h1>智域扫雷</h1>
+      <div class="difficulty">
+        <button id="easy">基础</button>
+        <button id="medium">中级</button>
+        <button id="expert">专家</button>
+        <button id="fullscreen">满屏</button>
+        <div class="custom-difficulty">
+          <input type="number" id="custom-rows" placeholder="行数" min="1" />
+          <input type="number" id="custom-cols" placeholder="列数" min="1" />
+          <input type="number" id="custom-mines" placeholder="地雷数" min="1" />
+          <button id="custom-start">自定义</button>
+        </div>
+      </div>
+      <div class="info">
+        <span>剩余炸弹: <span id="remaining-mines">0</span></span>
+        <span>时间: <span id="timer">0</span> 秒</span>
+      </div>
+      <div class="board" id="board"></div>
+      <div class="controls">
+        <button id="reset">重新开始</button>
+        <span id="status"></span>
+      </div>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
